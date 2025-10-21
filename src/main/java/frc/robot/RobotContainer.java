@@ -10,6 +10,7 @@ import frc.robot.commands.Autos;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.TankDrive;
 import frc.robot.commands.Follow;
+import frc.robot.commands.PID;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.Gyro;
@@ -41,7 +42,7 @@ public class RobotContainer {
   public RobotContainer() {
     // Configure the trigger bindings
     configureBindings();
-    drivetrain.setDefaultCommand(new Follow(drivetrain, lineFollower));
+    drivetrain.setDefaultCommand(new PID(gyro, drivetrain));
   }
 
   /**

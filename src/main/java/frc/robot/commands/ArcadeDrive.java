@@ -5,7 +5,6 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Gyro;
-import frc.robot.subsystems.LineFollower;
 
 public class ArcadeDrive extends Command {
     private final XboxController controller;

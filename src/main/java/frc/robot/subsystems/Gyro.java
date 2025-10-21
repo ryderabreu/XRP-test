@@ -18,4 +18,16 @@ public class Gyro extends SubsystemBase {
         SmartDashboard.putNumber("Gyro/AngleY", yFilter.calculate(gyro.getAngleY()));
         SmartDashboard.putNumber("Gyro/AngleZ", zFilter.calculate(gyro.getAngleZ()));
     }
+
+    public double getX() {
+        return xFilter.calculate(gyro.getAngleX());
+    }
+
+    public double getY() {
+        return yFilter.calculate(gyro.getAngleY());
+    }
+
+    public double getZ() {
+        return zFilter.calculate(gyro.getAngleZ());
+    }
 }

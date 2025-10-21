@@ -7,6 +7,10 @@ public class Drivetrain extends SubsystemBase {
     private final XRPMotor leftMotor = new XRPMotor(0);
     private final XRPMotor rightMotor = new XRPMotor(1);
 
+    public Drivetrain() {
+        rightMotor.setInverted(true);
+    }
+
     public void setMotors(double x, double y) {
         leftMotor.set(x);
         rightMotor.set(y);
